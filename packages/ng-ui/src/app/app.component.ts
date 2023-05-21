@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NxWelcomeComponent } from './nx-welcome.component';
+import { interpreterCore } from '@ts-interpreter/interpreter-core';
 
 @Component({
   standalone: true,
@@ -10,4 +11,6 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 })
 export class AppComponent {
   title = 'ng-ui';
+
+  interpreterCore = interpreterCore();
 }
