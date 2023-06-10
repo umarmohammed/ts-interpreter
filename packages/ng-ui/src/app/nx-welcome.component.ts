@@ -1,6 +1,5 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { interpreterCore } from '@ts-interpreter/interpreter-core';
 
 @Component({
   selector: 'ts-interpreter-nx-welcome',
