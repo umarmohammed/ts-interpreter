@@ -5,8 +5,10 @@ import { useState } from 'react';
 export function App() {
   const [code, setCode] = useState('');
 
+  const [res, setRes] = useState('');
+
   function handleSubmit() {
-    interpret(code);
+    setRes(JSON.stringify(interpret(code), null, 2));
   }
 
   return (
@@ -18,6 +20,8 @@ export function App() {
         rows={10}
       ></textarea>
       {code ? <button onClick={handleSubmit}>Submit</button> : null}
+
+      <pre>{res}</pre>
     </>
   );
 }
