@@ -8,7 +8,9 @@ import { interpret, interpreterCore } from '@ts-interpreter/interpreter-core';
   imports: [CommonModule],
   template: `
     <textarea (input)="handleInput($event)" cols="30" rows="10"></textarea>
-    <button *ngIf="inputText" (click)="handleSubmit()">Submit</button>
+    @if(inputText) {
+      <button  (click)="handleSubmit()">Submit</button>
+    }
     <pre>{{ outputTokens }} <pre>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
